@@ -1,15 +1,13 @@
 package com.github.fernandodev.easyratingdialog.library;
 
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
-
-import com.afollestad.materialdialogs.AlertDialogWrapper;
 
 import java.util.Date;
 
@@ -18,7 +16,7 @@ import java.util.Date;
  */
 public class EasyRatingDialog {
   public interface ConditionTrigger {
-    public boolean shouldShow();
+    boolean shouldShow();
   }
 
   Context mContext;
@@ -152,7 +150,7 @@ public class EasyRatingDialog {
   }
 
   private android.app.Dialog createDialog(Context context) {
-    return new AlertDialogWrapper.Builder(context)
+    return new AlertDialog.Builder(context)
         .setTitle(R.string.erd_title)
         .setMessage(R.string.erd_message)
         .setNegativeButton(R.string.erd_no_thanks, new DialogInterface.OnClickListener() {
