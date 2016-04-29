@@ -1,17 +1,16 @@
 package com.github.fernandodev.easyratingdialog.samplewithdagger;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.support.v7.app.AppCompatActivity;
 
 import com.github.fernandodev.easyratingdialog.library.EasyRatingDialog;
 
 import javax.inject.Inject;
 
 
-public class MainActivity extends ActionBarActivity {
-  @Inject  EasyRatingDialog easyRatingDialog;
+public class MainActivity extends AppCompatActivity {
+  @Inject
+  EasyRatingDialog easyRatingDialog;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
