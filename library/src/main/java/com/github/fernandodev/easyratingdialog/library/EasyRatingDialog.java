@@ -38,14 +38,14 @@ public class EasyRatingDialog {
   public void onStart() {
     if (didRate() || didNeverReminder()) return;
 
-    int lauchTimes = mPreferences.getInt(KEY_LAUNCH_TIMES, 0);
+    int launchTimes = mPreferences.getInt(KEY_LAUNCH_TIMES, 0);
     long firstDate = mPreferences.getLong(KEY_FIRST_HIT_DATE, -1L);
 
     if (firstDate == -1L) {
       registerDate();
     }
 
-    registerHitCount(++lauchTimes);
+    registerHitCount(++launchTimes);
   }
 
   public void showIfNeeded() {
