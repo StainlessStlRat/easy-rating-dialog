@@ -127,7 +127,7 @@ public class EasyRatingDialog {
         int maxLaunchTimes = mContext.getResources().getInteger(R.integer.erd_launch_times);
         int maxDaysAfter = mContext.getResources().getInteger(R.integer.erd_max_days_after);
 
-        return daysBetween(firstDate, today) > maxDaysAfter || launchTimes > maxLaunchTimes;
+        return daysBetween(firstDate, today) > maxDaysAfter && launchTimes > maxLaunchTimes;
     }
 
     private void registerHitCount(int hitCount) {
